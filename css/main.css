@@ -1,0 +1,168 @@
+html, body {
+    position: relative;
+    height: 100%;
+}
+body {
+    background: #000;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size:12px;
+    font-family:"Microsoft YaHei"
+}
+.progress{
+    border-radius: 50%;
+    width: 70%;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    top: 7%;
+    right: 0;
+    bottom: 0;
+    margin:auto;
+}
+.progressbar{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #e60012;
+    -webkit-transition:width ease-in 200ms;
+}
+.progresstext{
+    position: absolute;
+    top: 30px;
+    right: 0;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+}
+.swiper-slide img{
+    width: 100%;
+}
+.page1{
+    color: #fff;
+    background:url(../img/page1.png)  no-repeat; 
+    background-size:100%;
+}
+.page2,.page4,.page6,.page7,.page8,.page10{
+    background:url(../img/page.png) no-repeat;
+    background-size:100%;
+}
+.page2-title{
+    margin: 33% 0 14% 0;
+}
+.page3{
+    background:url(../img/page3.png) no-repeat;
+    background-size:100%;
+}
+.page4-BigBtn{
+    margin: 0 auto;
+    width: 47%;
+    height: 29%;
+    background:url(../img/page4-BigBtn.png) no-repeat;
+    background-size:100%;
+}
+.page4-SmallBtn{
+    margin: 0 auto;
+    width: 45%;
+    height: 19%;
+    background:url(../img/page4-SmallBtn.png) no-repeat;
+    background-size:100%;
+}
+.page5{
+    background:url(../img/page5.png) no-repeat;
+    background-size:100%;
+}
+.page5-return{
+    width: 30%;
+    margin: 0 auto;
+    height: 212px;
+    background:url(../img/page5-return.png) no-repeat;
+    background-size:100%;
+}
+.page6-BigBtn{
+    margin: 0 auto;
+    width: 47%;
+    height: 29%;
+    background:url(../img/page6-Btn.png) no-repeat;
+    background-size:100%;
+}
+.page7-BigBtn{
+    margin: 0 auto;
+    width: 47%;
+    height: 29%;
+    background:url(../img/page7-Btn.png) no-repeat;
+    background-size:100%;
+}
+.page8-BigBtn{
+    width: 45%;
+    margin: 0 auto;
+    height: 212px;
+    background:url(../img/page8-Btn.png) no-repeat;
+    background-size:100%;
+}
+.banner{
+    display:block;
+    width:95%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 20px;
+}
+.banner .turnplate{
+    display: block;
+    width: 270px;
+    position: relative;
+    margin: 0 auto;
+}
+.banner .turnplate canvas.item{
+    
+}
+.banner .turnplate img {
+    position:absolute;
+    width:10%;
+    left:45%;
+    top: 6.5%;
+}
+.turnplate{
+    background:url(../img/page10-circular.png) no-repeat;
+    background-size:100%;
+}
+.item{
+    height: 270px;
+    width: 270px;
+}
+.page10-Btn{
+    margin: 0 auto;
+    background:url(../img/page10-button.png) no-repeat;
+    background-size:100%;
+    width: 50%;
+    height: 60%;
+}
+.page10-share{
+    background: url(../img/page10-share.png) no-repeat;
+    background-size: 100%;
+    width: 30%;
+    position: absolute;
+    height: 60px;
+    top: 70%;
+    left: 35%;
+}
+#Luckdraw{
+    height: 100%;
+}
+.page-title{
+    margin-top: 31%;
+}
+.subtitle{
+    margin-bottom :10%;
+}
+.page12{
+    background:url(../img/page12.png) no-repeat;
+    background-size:100%;
+}
