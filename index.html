@@ -47,7 +47,7 @@
                     </video>
                 </div>
                 <img id="page3-Hexagon1" class="page3-Hexagon" src="img/page3-video.png" onclick="play()">
-                <img id="page3-Hexagon2" class="page3-Hexagon" src="img/page3-video2.png" style="display: none">
+                <img id="page3-Hexagon2" class="page3-Hexagon" src="img/page3-video2.png">
                 <!-- <div id="page3-Btn" class="page3-enlarge"></div> -->
             </div>
             <div class="swiper-slide page4">    
@@ -110,26 +110,26 @@
                     <div class="page10-Btn pointer"></div>
                 </div>
                 <!-- 未中奖 -->
-                <div id="noluckly" style="display:none">
+                <div id="noluckly">
                     <img src="img/page10-noluckly.png">
                 </div>
                 <!-- 一等奖 -->
-                <div id="firstprize" style="display:none">
+                <div id="firstprize">
                     <img src="img/page10-one.png">
                 </div>
                 <!-- 二等奖 -->
-                <div id="secondprize" style="display:none">
+                <div id="secondprize">
                     <img src="img/page10-two.png">
                 </div>
                 <!-- 三等奖 -->
-                <div id="thirdprize" style="display:none">
+                <div id="thirdprize">
                     <img src="img/page10-three.png">
                 </div>
                 <!-- 分享按钮 -->
-                <div id="shareBtn" class="page10-shareBtn" style="display:none" onclick="Share()">
+                <div id="shareBtn" class="page10-shareBtn" onclick="Share()">
                 </div>
                 <!-- 分享 -->
-                <div id="share" style="display:none">
+                <div id="share">
                     <img src="img/page10-share.png">
                 </div>
             </div>
@@ -141,6 +141,7 @@
         var swiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
             paginationClickable: true,//此参数设置为true时，点击分页器的指示点分页器会控制Swiper切换。
+            preloadImages:true,
             direction: 'vertical' ,//垂直方向滑动
             spaceBetween:0,
             noSwiping : true,
@@ -245,7 +246,6 @@
             loader.start();
         }
         //视频播放
-        videojs.options.flash.swf = "video-js.swf";
         var myPlayer = videojs('my-video');
         // console.log(whereYouAt)
         function play(){

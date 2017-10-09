@@ -90,6 +90,9 @@ body {
 .page3-Hexagon{
     position: relative;
 }
+#page3-Hexagon2{
+    display: none;
+}
 .page3-enlarge{
     position: relative;
     height: 10px;
@@ -203,10 +206,16 @@ body {
     height: 60px;
     top: 55%;
     left: 35%;
+    display:none;
 }
-#Luckdraw,#noluckly,#firstprize,#secondprize,#thirdprize,#share{
+#Luckdraw{
     height: 100%;
     position: absolute;
+}
+#noluckly,#firstprize,#secondprize,#thirdprize,#share{
+    height: 100%;
+    position: absolute;
+    display:none;
 }
 #share{
     height: 100%;
