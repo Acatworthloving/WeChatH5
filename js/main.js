@@ -43,23 +43,23 @@ $(document).ready(function(){
 				console.log(txt);
 				if (txt=='一等奖') {
 					document.getElementById('Luckdraw').style.display='none';
+					document.getElementById('shareBtn').style.display='block';
 					document.getElementById('firstprize').style.display='block';
-					document.getElementById('share').style.display='block';
 				}
 				else if (txt=='二等奖') {
 					document.getElementById('Luckdraw').style.display='none';
+					document.getElementById('shareBtn').style.display='block';
 					document.getElementById('secondprize').style.display='block';
-					document.getElementById('share').style.display='block';
 				}
 				else if (txt=='三等奖') {
 					document.getElementById('Luckdraw').style.display='none';
+					document.getElementById('shareBtn').style.display='block';
 					document.getElementById('thirdprize').style.display='block';
-					document.getElementById('share').style.display='block';
 				}
 				else{
 					document.getElementById('Luckdraw').style.display='none';
+					document.getElementById('shareBtn').style.display='block';
 					document.getElementById('noluckly').style.display='block';
-					document.getElementById('share').style.display='block';
 				};
 				
 				turnplate.bRotate = !turnplate.bRotate;

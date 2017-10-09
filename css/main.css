@@ -10,37 +10,12 @@ body {
     font-size:12px;
     font-family:"Microsoft YaHei"
 }
-.progress{
-    border-radius: 50%;
-    width: 70%;
-    height: 10px;
-    position: absolute;
-    left: 0;
-    top: 7%;
-    right: 0;
-    bottom: 0;
-    margin:auto;
-}
-.progressbar{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 100%;
-    background-color: #e60012;
-    -webkit-transition:width ease-in 200ms;
-}
-.progresstext{
-    position: absolute;
-    top: 30px;
-    right: 0;
-}
 .swiper-container {
     width: 100%;
     height: 100%;
 }
 .swiper-slide {
-    text-align: center;
+    text-align: right;
 }
 .swiper-slide img{
     width: 100%;
@@ -50,16 +25,90 @@ body {
     background:url(../img/page1.png)  no-repeat; 
     background-size:100%;
 }
-.page2,.page4,.page6,.page7,.page8,.page10{
+.progress{
+    border-radius: 50%;
+    width: 68%;
+    height: 10px;
+    position: absolute;
+    left: -5px;
+    top: 7%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.page1-line{
+    position: absolute;
+    left: 0;
+    top: -60px;
+    width: 0;
+    height: 100%;
+    background:url(../img/page1-line.png)  no-repeat;
+    background-size:100%;
+    -webkit-transition:width ease-in 200ms;
+}
+.progresstext {
+    position: absolute;
+    top: -84px;
+    left: 11px;
+    width: 0px;
+}
+.page1-hexagon{
+    width: 20px;
+    height: 20px;
+    background: url(../img/page1-hexagon.png) no-repeat;
+    right: 0px;
+    top: 17px;
+    position: absolute;
+}
+.page1-number{
+    width: 30px;
+    height: 20px;
+    right: 0;
+    position: absolute;
+}
+.page2,.page4,.page6,.page7,.page8{
     background:url(../img/page.png) no-repeat;
     background-size:100%;
 }
 .page2-title{
-    margin: 33% 0 14% 0;
+    margin: 1% 0 10% 0;
 }
 .page3{
     background:url(../img/page3.png) no-repeat;
     background-size:100%;
+}
+.page3-Title{
+    margin: 8% 0;
+}
+.page3-video {
+    width: 142%;
+    height: 46%;
+    margin: 0 auto;
+    position: absolute;
+    /* border: 1px solid; */
+}
+.page3-Hexagon{
+    position: relative;
+}
+.page3-enlarge{
+    position: relative;
+    height: 10px;
+    width: 10px;
+    background: red;
+}
+.video-js .vjs-tech {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.video-js .vjs-big-play-button {
+    display: none;
+}
+.my-video-dimensions {
+    width: 100%;
+    height: 100%;
 }
 .page4-BigBtn{
     margin: 0 auto;
@@ -82,7 +131,7 @@ body {
 .page5-return{
     width: 30%;
     margin: 0 auto;
-    height: 212px;
+    height: 12%;
     background:url(../img/page5-return.png) no-repeat;
     background-size:100%;
 }
@@ -110,9 +159,7 @@ body {
 .banner{
     display:block;
     width:95%;
-    margin-left:auto;
-    margin-right:auto;
-    margin-bottom: 20px;
+    margin: 10% auto 2%;
 }
 .banner .turnplate{
     display: block;
@@ -137,6 +184,10 @@ body {
     height: 270px;
     width: 270px;
 }
+.page10{
+    background:url(../img/page10.png) no-repeat;
+    background-size:100%;
+}
 .page10-Btn{
     margin: 0 auto;
     background:url(../img/page10-button.png) no-repeat;
@@ -144,25 +195,29 @@ body {
     width: 50%;
     height: 60%;
 }
-.page10-share{
-    background: url(../img/page10-share.png) no-repeat;
+.page10-shareBtn{
+    background: url(../img/page10-shareBtn.png) no-repeat;
     background-size: 100%;
     width: 30%;
     position: absolute;
     height: 60px;
-    top: 70%;
+    top: 55%;
     left: 35%;
 }
-#Luckdraw{
+#Luckdraw,#noluckly,#firstprize,#secondprize,#thirdprize,#share{
     height: 100%;
+    position: absolute;
+}
+#share{
+    height: 100%;
+    position: relative;
 }
 .page-title{
     margin-top: 31%;
 }
 .subtitle{
-    margin-bottom :10%;
+    margin-bottom :4%;
 }
-.page12{
-    background:url(../img/page12.png) no-repeat;
-    background-size:100%;
+.common-logo{
+    margin: 20px auto;
 }

@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>G不可失</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/video-js.css">
     <!-- Swiper JS -->
     <script src="js/jquery.js"></script>
     <script type="text/javascript" src="js/swiper.min.js" ></script>
@@ -16,6 +16,7 @@
     <script type="text/javascript" src="js/main.js"></script>
     <script  type="text/javascript" src="js/resLoader.js"></script>
     <script type="text/javascript" src="js/awardRotate.js"></script>
+    <script src="http://vjs.zencdn.net/6.2.5/video.min.js"></script>
 </head>
 <body>
     <!-- Swiper -->
@@ -24,22 +25,35 @@
             <!-- 首页 -->
             <div class="swiper-slide page1 swiper-no-swiping">
                 <div class="progress">
-                    <div class="progressbar"></div>
-                    <div class="progresstext">
-                        <span class="current"></span>/
-                        <span class="total">100%</span>
+                    <div class="progressbar page1-line"></div>
+                    <div class="progresstext progressbar">
+                        <span class="current page1-number"></span>
+                        <div class="page1-hexagon"></div>
                     </div>
                 </div>
             </div>
             <div class="swiper-slide page2">
+                <img class="common-logo" src="img/common-logo.png">
                 <img class="ani page2-title" swiper-animate-effect="slideInRight" swiper-animate-duration="0.9s" swiper-animate-delay="0s" src="img/page2-title.png">
                 <img class="ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="0.9s" swiper-animate-delay="0.3s" src="img/page2-Subtitle.png">
             </div>
             <div class="swiper-slide page3">
-                <img class="ani" swiper-animate-effect="slideInRight" swiper-animate-duration="0.6s" swiper-animate-delay="0s" src="img/page3-Title.png">
+                <img class="common-logo" src="img/common-logo.png">
+                <img class="ani" swiper-animate-effect="slideInRight" swiper-animate-duration="0.6s" swiper-animate-delay="0s" src="img/common-title.png">
+                <img class="ani page3-Title" swiper-animate-effect="slideInLeft" swiper-animate-duration="0.6s" swiper-animate-delay="0s" src="img/page3-Title.png">
+                <div id="page3-video" class="page3-video">
+                    <video id="my-video" class="video-js" controls preload="auto" data-setup="{}" poster="img/page3-video.png">
+                        <source src="car.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <img id="page3-Hexagon1" class="page3-Hexagon" src="img/page3-video.png" onclick="play()">
+                <img id="page3-Hexagon2" class="page3-Hexagon" src="img/page3-video2.png" style="display: none">
+                <!-- <div id="page3-Btn" class="page3-enlarge"></div> -->
             </div>
-            <div class="swiper-slide page4">
-                <img class="ani" swiper-animate-effect="slideInRight" swiper-animate-duration="0.6s" swiper-animate-delay="0s" src="img/page4-Title.png">
+            <div class="swiper-slide page4">    
+                <img class="common-logo" src="img/common-logo.png">
+                <img class="ani" swiper-animate-effect="slideInRight" swiper-animate-duration="0.6s" swiper-animate-delay="0s" src="img/common-title.png">
+                <img class="ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="0.6s" swiper-animate-delay="0s" src="img/page4-Title.png">
                 <div class="ani page4-BigBtn" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.6s" swiper-animate-delay="0.2s" onclick="page6()">
                 </div>
                 <div class="page4-SmallBtn" src="img/page4-SmallBtn.png" onclick="Next()">
@@ -47,27 +61,31 @@
             </div>
             <!-- 活动详情 -->
             <div class="swiper-slide page5 swiper-no-swiping"><!-- swiper-no-swiping -->
-                <img class="ani page-title" swiper-animate-effect="slideInRight" swiper-animate-duration="0.6s" swiper-animate-delay="0s" src="img/page-title.png">
+                <img class="common-logo" src="img/common-logo.png">
+                <img class="ani" swiper-animate-effect="slideInRight" swiper-animate-duration="0.6s" swiper-animate-delay="0s" src="img/common-title.png">
                 <img class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.6s" swiper-animate-delay="0.2s" src="img/page5-content.png">
                 <div class="page5-return" onclick="Prev()"></div>
             </div>
             <!-- 一重好礼 -->
             <div class="swiper-slide page6 swiper-no-swiping">
-                <img class="ani page-title" swiper-animate-effect="slideInRight" swiper-animate-duration="0.6s" swiper-animate-delay="0s" src="img/page-title.png">
+                <img class="common-logo" src="img/common-logo.png">
+                <img class="ani" swiper-animate-effect="slideInRight" swiper-animate-duration="0.6s" swiper-animate-delay="0s" src="img/common-title.png">
                 <img class="ani subtitle" swiper-animate-effect="slideInLeft" swiper-animate-duration="0.6s" swiper-animate-delay="0.2s" src="img/page6-subtitle.png">
                 <div class="ani page6-BigBtn" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.6s" swiper-animate-delay="0.4s" onclick="Next()">
                 </div>
             </div>
             <!-- 二重好礼 -->
             <div class="swiper-slide page7 swiper-no-swiping">
-                 <img class="ani page-title" swiper-animate-effect="slideInRight" swiper-animate-duration="0.6s" swiper-animate-delay="0s" src="img/page-title.png">
+                <img class="common-logo" src="img/common-logo.png">
+                <img class="ani" swiper-animate-effect="slideInRight" swiper-animate-duration="0.6s" swiper-animate-delay="0s" src="img/common-title.png">
                 <img class="ani subtitle" swiper-animate-effect="slideInLeft" swiper-animate-duration="0.6s" swiper-animate-delay="0.2s" src="img/page7-subtitle.png">
                 <div class="ani page7-BigBtn" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.6s" swiper-animate-delay="0.4s" onclick="Next()">
                 </div>
             </div>
             <!-- 三重好礼 -->
             <div class="swiper-slide page8 swiper-no-swiping">
-                <img class="ani page-title" swiper-animate-effect="slideInRight" swiper-animate-duration="0.6s" swiper-animate-delay="0s" src="img/page-title.png">
+                <img class="common-logo" src="img/common-logo.png">
+                <img class="ani" swiper-animate-effect="slideInRight" swiper-animate-duration="0.6s" swiper-animate-delay="0s" src="img/common-title.png">
                 <img class="ani subtitle" swiper-animate-effect="slideInLeft" swiper-animate-duration="0.6s" swiper-animate-delay="0.2s" src="img/page8-subtitle.png">
                 <img class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.6s" swiper-animate-delay="0.2s" src="img/page8-content.png">
                 <div class="ani page8-BigBtn" onclick="Next()">
@@ -81,7 +99,8 @@
             <div class="swiper-slide page10 swiper-no-swiping">
                 <!-- 抽奖 -->
                 <div id="Luckdraw" style="display:block">
-                    <img class="ani page-title" swiper-animate-effect="slideInRight" swiper-animate-duration="0.6s" swiper-animate-delay="0s" src="img/page-title.png">
+                    <img class="common-logo" src="img/common-logo.png">
+                    <img class="ani" swiper-animate-effect="slideInRight" swiper-animate-duration="0.6s" swiper-animate-delay="0s" src="img/common-title.png">
                     <div class="banner">
                         <div class="turnplate">
                             <canvas class="item" id="wheelcanvas" width="422px" height="422px"></canvas>
@@ -91,26 +110,35 @@
                     <div class="page10-Btn pointer"></div>
                 </div>
                 <!-- 未中奖 -->
-                <img id="noluckly" src="img/page10-noluckly.png" style="display:none">
+                <div id="noluckly" style="display:none">
+                    <img src="img/page10-noluckly.png">
+                </div>
                 <!-- 一等奖 -->
-                <img id="firstprize" src="img/page10-one.png" style="display:none">
+                <div id="firstprize" style="display:none">
+                    <img src="img/page10-one.png">
+                </div>
                 <!-- 二等奖 -->
-                <img id="secondprize" src="img/page10-two.png" style="display:none">
+                <div id="secondprize" style="display:none">
+                    <img src="img/page10-two.png">
+                </div>
                 <!-- 三等奖 -->
-                <img id="thirdprize" src="img/page10-three.png">
-                <div id="share" class="page10-share" style="display:none" onclick="Next()">
+                <div id="thirdprize" style="display:none">
+                    <img src="img/page10-three.png">
+                </div>
+                <!-- 分享按钮 -->
+                <div id="shareBtn" class="page10-shareBtn" style="display:none" onclick="Share()">
+                </div>
+                <!-- 分享 -->
+                <div id="share" style="display:none">
+                    <img src="img/page10-share.png">
                 </div>
             </div>
-            <!-- 分享 -->
-            <div class="swiper-slide page12">
-            </div>
         </div>
-        <!-- Add Pagination -->
-        <!-- <div class="swiper-pagination"></div> -->
     </div>
     <!-- Initialize Swiper -->
     <script>
-         var swiper = new Swiper('.swiper-container', {
+        // swiper插件相关设置
+        var swiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
             paginationClickable: true,//此参数设置为true时，点击分页器的指示点分页器会控制Swiper切换。
             direction: 'vertical' ,//垂直方向滑动
@@ -120,62 +148,86 @@
                 swiperAnimateCache(swiper); //隐藏动画元素 
                 swiperAnimate(swiper); //初始化完成开始动画
             }, 
+            onSlideChangeStart: function(swiper){
+              // console.log(swiper.activeIndex);
+              if (swiper.activeIndex=='2') {
+                    swiper.lockSwipeToNext();
+                }else{
+                    swiper.unlockSwipeToNext();
+                };
+            },
             onSlideChangeEnd: function(swiper){ 
-                console.log('切换结束')
+                // console.log('切换结束')
                 swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
             }
+            
         });
+        // 点击按钮事件
          function Prev(){
             swiper.slidePrev();
          }
          function Next(){
+            swiper.unlockSwipeToNext();
             swiper.slideNext();
          }
          function page6(){
+            swiper.unlockSwipeToNext();
             swiper.slideTo(4, 0, true);
          }
+         function Share(){
+            document.getElementById('share').style.display='block';
+         }
+         
+         // 图片预加载进度条
          var loader = new resLoader({
             resources : [
-                'img/page.png',
-                'img/page2-Subtitle.png',
-                'img/page2-Title.png',
-                'img/page3-Title.png',
-                'img/page3.png',
-                'img/page4-BigBtn.png',
-                'img/page4-SmallBtn.png',
-                'img/page4-Title.png',
-                'img/page5-return.png',
+                'img/common-logo.png',
+                'img/common-title.png',
                 'img/page-title.png',
-                'img/page5.png',
-                'img/page5-content.png',
-                'img/page6-Btn.png',
-                'img/page6-subtitle.png',
-                'img/page7-Btn.png',
-                'img/page7-subtitle.png',
-                'img/page8-Btn.png',
-                'img/page8-content.png',
-                'img/page8-subtitle.png',
+                'img/page.png',
+                'img/page1-hexagon.png',
+                'img/page1-line.png',
+                'img/page1.png',
                 'img/page10-button.png',
                 'img/page10-circular.png',
                 'img/page10-noluckly.png',
                 'img/page10-one.png',
                 'img/page10-Pointer.png',
                 'img/page10-share.png',
+                'img/page10-shareBtn.png',
                 'img/page10-three.png',
                 'img/page10-title.png',
                 'img/page10-two.png',
-                'img/page11.png',
-                'img/page12.png',
+                'img/page10.png',
+                'img/page2-Subtitle.png',
+                'img/page2-Title.png',
+                'img/page3-Title.png',
+                'img/page3-video.png',
+                'img/page3-video2.png',
+                'img/page3.png',
+                'img/page4-BigBtn.png',
+                'img/page4-SmallBtn.png',
+                'img/page4-Title.png',
+                'img/page5-content.png',
+                'img/page5-return.png',
+                'img/page5.png',
+                'img/page6-Btn.png',
+                'img/page6-subtitle.png',
+                'img/page7-Btn.png',
+                'img/page7-subtitle.png',
+                'img/page8-Btn.png',
+                'img/page8-content.png',
+                'img/page8-subtitle.png'
             ],
             onStart : function(total){
-                console.log('start:'+total);
+                // console.log('start:'+total);
             },
             onProgress : function(current, total){
-                console.log(current+'/'+total);
+                // console.log(current+'/'+total);
                 var percent =parseInt(current/total*100);
                 $('.progressbar').css('width', percent+'%');
                 $('.progresstext .current').text(percent+'%');
-                console.log($('.progresstext .current').text());
+                // console.log($('.progresstext .current').text());
                 if($('.progresstext .current').text() == '100%') {
                     swiper.removeSlide(0);
                     swiperAnimate(swiper);
@@ -185,12 +237,43 @@
                 // alert('加载完毕:'+total+'个资源');
             }
         });
+        // 在page.png图片加载完后开始运行图片预加载函数
         var a=new Image(); //这个是原生的JS实例化
         a.src='img/page.png';
         a.onload=function(){
-            console.log("完成加载");
+            // console.log("完成加载");
             loader.start();
         }
+        //视频播放
+        videojs.options.flash.swf = "video-js.swf";
+        var myPlayer = videojs('my-video');
+        // console.log(whereYouAt)
+        function play(){
+            document.getElementById('page3-Hexagon2').style.display='block';
+            document.getElementById('page3-Hexagon1').style.display='none';
+            myPlayer.play();
+         }
+         myPlayer.on("ended", function(){
+            // console.log("end", this.currentTime());
+            document.getElementById('page3-Hexagon2').style.display='none';
+            document.getElementById('page3-Hexagon1').style.display='block';
+        });
+        //点击横屏事件
+        // document.getElementById("page3-Btn").onclick=function(){     
+        //     var elem = document.getElementById("page3-video");      
+        //     requestFullScreen(elem);     
+        // };     
+        // function requestFullScreen(element) {    
+        //     var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullScreen;    
+        //     if (requestMethod) {      
+        //         requestMethod.call(element);    
+        //     } else if (typeof window.ActiveXObject !== "undefined") {      
+        //         var wscript = new ActiveXObject("WScript.Shell");    
+        //         if (wscript !== null) {    
+        //             wscript.SendKeys("{F11}");    
+        //         }    
+        //     }    
+        // }    
     </script>
 </body>
 </html>
