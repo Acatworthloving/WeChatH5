@@ -78,7 +78,7 @@ body {
     background-size:100%;
 }
 .page3-Title{
-    margin: 8% 0;
+    margin: 7% 0;
 }
 .page3-video {
     width: 142%;
@@ -116,14 +116,14 @@ body {
 .page4-BigBtn{
     margin: 0 auto;
     width: 47%;
-    height: 29%;
+    height: 32%;
     background:url(../img/page4-BigBtn.png) no-repeat;
     background-size:100%;
 }
 .page4-SmallBtn{
     margin: 0 auto;
-    width: 45%;
-    height: 19%;
+    width: 40%;
+    height: 16%;
     background:url(../img/page4-SmallBtn.png) no-repeat;
     background-size:100%;
 }
@@ -141,14 +141,14 @@ body {
 .page6-BigBtn{
     margin: 0 auto;
     width: 47%;
-    height: 29%;
+    height: 32%;
     background:url(../img/page6-Btn.png) no-repeat;
     background-size:100%;
 }
 .page7-BigBtn{
     margin: 0 auto;
     width: 47%;
-    height: 29%;
+    height: 32%;
     background:url(../img/page7-Btn.png) no-repeat;
     background-size:100%;
 }
