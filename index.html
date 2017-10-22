@@ -157,6 +157,11 @@
                 }else{
                     swiper.unlockSwipeToNext();
                 };
+                if (swiper.activeIndex!='1') {
+                    document.getElementById('page3-Hexagon2').style.display='none';
+                    document.getElementById('page3-Hexagon1').style.display='block';
+                    myPlayer.pause();
+              }; 
             },
             onSlideChangeEnd: function(swiper){ 
                 // console.log('切换结束')
